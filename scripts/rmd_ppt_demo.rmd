@@ -1,0 +1,14 @@
+---
+title: "R Markdown PowerPoint Demo"
+author: "Josh Radack"
+date: "Last rendered on `r Sys.Date()`"
+output:
+  powerpoint_presentation:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+

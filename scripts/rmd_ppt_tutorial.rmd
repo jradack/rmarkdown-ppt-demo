@@ -12,3 +12,115 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# What is R Markdown?
+
+R Markdown is an extension of Markdown, a popular plain text markup language.
+Unlike "What You See is What You Get" (WYSIWYG) editors like Microsoft Word or PowerPoint, formatting is dictated through the text in the file rather than buttons or menu options.
+
+R Markdown has the additional benefit of being able to integrate R code into the output document through code chunks.
+This means you can clean data, run an analysis, and produce tables and figures all within a single file that will create an integrated output document.
+
+## Benefits
+
+Some of the benefits of using R Markdown include:
+
+- **Reproducibility**:
+The same inputs will yield the same outputs.
+- **Efficiency**:
+Since the R code and text are integrated into a single output, there is no need to copy and paste results from an analysis file into the cleaned output file.
+- **Collaboration**:
+Thanks to better efficiency, R Markdown makes it easier to edit and tweak and analysis, and share the results more quickly.
+- **Flexibility**:
+A single R Markdown document can be used to produce multiple different outputs, including Word, pdf, PowerPoint, and HTML, with minimal changes needed.
+
+
+# R Markdown Basics
+
+R Markdown combines Markdown syntax with R code blocks to generate documents.
+Both elements are written as plain text in a single file, and rendered into various output types through the R package `knitr` and the program `pandoc`.
+
+## Markdown Syntax
+
+| Operation | Syntax | Result |
+|-----------|--------|--------|
+| Italic | `*italic*` | *italic* |
+| Bold | `**bold**` | **bold** |
+| Strikeout | `~~strikeout~~` | ~~strikeout~~ |
+| Subscript | `Some Text~subscript~` | Some Text~subscript~ |
+| Superscript | `Some Text^superscript^` | Some Text^superscript^ |
+| Verbatim/code | ``verbatim`` | `verbatim` |
+| Links | `[R Markdown](https://rmarkdown.rstudio.com/)` | [R Markdown](https://rmarkdown.rstudio.com/) |
+
+### Lists
+
+Markdown can create numbered and unnumbered lists.
+The level of the list is controlled by 
+Make sure to leave an empty line before and after the list items for it to render properly.
+
+1. Item One
+2. Item Two
+  1. Subitem One
+  2. Subitem Two
+    1. Sub-subitem One
+3. Item Three
+
+Unnumbered lists can be made using the symbols `*`, `-`, or `+`.
+
+* Item One
+* Item Two
+  * Subitem One
+  * Subitem Two
+    * Sub-subitem One
+* Item Three
+
+### Math Expressions
+
+Mathematical symbols and expressions can be formatted using `$` thanks to `pandoc`.
+These can be inline with other text, like so: $A = \pi r^2$.
+They can also be displayed more prominently like so:
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+R Studio will even include a nice preview to show you what your equation will look like after rendering.
+![](../images/math_equation_source.jpg "Math Equation")
+
+
+### Block Quotations
+
+Longer chunks of quoted text can be formatted using the symbol `>`.
+
+> Block quotations
+
+## Code Blocks
+
+## Rendering Output
+
+
+# PowerPoint Specifics
+
+## New Slides
+
+## Text Formatting
+
+## Inserting Images and Tables
+
+### Controlling Image Size
+
+
+# More Advanced Features
+
+## Table of Contents
+
+## Speaker Notes
+
+## Custom Templates
+
+## Multi-Column Slides
+
+# Sources
+
+For more information, visit these sites:
+
+- [posit - Rendering PowerPoint Presentations with the RStudio IDE](https://support.posit.co/hc/en-us/articles/360004672913-Rendering-PowerPoint-Presentations-with-the-RStudio-IDE)
+- [R Markdown: The Definitive Guide - PowerPoint presentation](https://bookdown.org/yihui/rmarkdown/powerpoint-presentation.html)
+- [Markdown Guide](https://www.markdownguide.org/)
+
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>

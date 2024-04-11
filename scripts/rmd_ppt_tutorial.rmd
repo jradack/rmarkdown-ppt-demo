@@ -13,6 +13,13 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{css, echo=FALSE}
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+```
+
 # What is R Markdown?
 
 R Markdown is an extension of Markdown, a popular plain text markup language.
@@ -66,8 +73,29 @@ Standard text formatting can be accomplished using Markdown.
 ### Lists
 
 Markdown can create numbered and unnumbered lists.
-The level of the list is controlled by 
+The level of the list is controlled by the amount of indentation - use tab or at least 4 spaces to create a sublevel.
 Make sure to leave an empty line before and after the list items for it to render properly.
+
+::::{.flex-container}
+
+:::{}
+
+Here is the markdown...
+
+```markdown
+1. Item One
+2. Item Two
+    1. Subitem One
+    2. Subitem Two
+        1. Sub-subitem One
+3. Item Three
+```
+
+:::
+
+:::{}
+
+...which will look like this:
 
 1. Item One
 2. Item Two
@@ -76,7 +104,31 @@ Make sure to leave an empty line before and after the list items for it to rende
     1. Sub-subitem One
 3. Item Three
 
+:::
+
+::::
+
 Unnumbered lists can be made using the symbols `*`, `-`, or `+`.
+
+::::{.flex-container}
+
+:::{}
+
+Here is the markdown...
+
+```markdown
+* Item One
+* Item Two
+    * Subitem One
+    * Subitem Two
+        * Sub-subitem One
+* Item Three
+```
+:::
+
+:::{}
+
+...which will look like this:
 
 * Item One
 * Item Two
@@ -84,6 +136,10 @@ Unnumbered lists can be made using the symbols `*`, `-`, or `+`.
   * Subitem Two
     * Sub-subitem One
 * Item Three
+
+:::
+
+::::
 
 ### Math Expressions
 

@@ -4,11 +4,122 @@ author: "Josh Radack"
 date: "Last rendered on `r Sys.Date()`"
 output:
   powerpoint_presentation:
-    toc: true
+    toc: true # Creates a table of contents slide
+    reference_doc: ../inputs/reference-ppt.pptx # This specifies the custom template file
 ---
 
-```{r setup, include=FALSE}
+```{r, setup, include=FALSE}
+# This code chunk is used to set up global options for the R Markdown document
 knitr::opts_chunk$set(echo = FALSE)
+
+# It's a good place to load packages too
+library(tidyverse)
+library(flextable)
 ```
 
+
+# New Section
+
+## Slide Title
+
+::: incremental
+
+- I can make a bulleted list
+- Where the bullet points appear incrementally
+  - Here's a sub-item
+  - Make sure to indent!
+- Some more bullet points
+- Inlcuded here
+
+:::
+
+## Tables and New Slides
+
+- Let's create a table using the `mtcars` dataset
+- Two different methods
+  - Markdown syntax
+  - Directly printing a `data.frame` with `flextable`
+
+---
+
+| Statistic | Value |
+|-----------|-------|
+| Minimum | `r min(mtcars$mpg)` |
+| Q1 | `r quantile(mtcars$mpg, 0.25)` |
+| Median | `r median(mtcars$mpg)` |
+| Q3 | `r quantile(mtcars$mpg, 0.75)` |
+| Maximum | `r max(mtcars$mpg)` |
+
+
+---
+
+```{r, five-number-summary}
+set_flextable_defaults(
+  font.size = 10,
+  theme_fun = theme_vanilla,
+  padding = 6,
+  background.color = "#EFEFEF"
+)
+
+mtcars %>%
+  summarize(
+    Minimum = min(mpg),
+    Q1 = quantile(mpg, 0.25),
+    Median = median(mpg),
+    Q3 = quantile(mpg, 0.75),
+    Maximum = max(mpg)
+  ) %>%
+  pivot_longer(
+    everything(),
+    names_to = "Statistic",
+    values_to = "Value"
+  ) %>%
+  flextable() %>%
+  autofit()
+```
+
+## A slide with text and a figure
+
+- Embedding R code into a slide
+- Generate tables and plots
+- Display them on a slide
+
+```{r, density-plot, message = FALSE}
+# Set up seed and parameters
+set.seed(100)
+pop_mean = 5
+pop_sd = 5
+
+# Generate random sample
+df <- data.frame(
+  x = rnorm(1000, mean = pop_mean, sd = pop_sd)
+)
+
+# Plot the results
+df %>%
+  ggplot(aes(x = x)) +
+  geom_histogram(
+    aes(y = after_stat(density))
+  ) +
+  geom_function(
+    fun = dnorm,
+    args = list(mean = pop_mean, sd = pop_sd),
+    color = "red"
+  )
+```
+
+## Multi-Column Slide
+
+:::::: {.columns}
+::: {.column}
+- Content of the left column.
+- Some more stuff
+- *Markdown* syntax can be **utilized**
+:::
+
+::: {.column}
+- Content of the right column.
+- Some other stuff
+:::
+::::::
 

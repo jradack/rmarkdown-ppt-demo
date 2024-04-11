@@ -148,7 +148,7 @@ These can be inline with other text, like so: $A = \pi r^2$.
 They can also be displayed more prominently like so:
 $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 R Studio will even include a nice preview to show you what your equation will look like after rendering.
-![](../images/math_equation_source.jpg "Math Equation")
+![](../inputs/math_equation_source.jpg "Math Equation")
 
 
 ### Block Quotations

@@ -91,6 +91,58 @@ Longer chunks of quoted text can be formatted using the symbol `>`.
 > 
 > \- George E. P. Box
 
+## R Markdown Syntax
+
+R Markdown extends Markdown's syntax by allowing for the inclusion of chunks of R code, which will be evaluated when the document is rendered.
+Any output from the R code (e.g. tables, plots, model output) will be inserted into the output document.
+
+### YAML Header
+
+The YAML header is a block of code appearing at the very beginning of an R Markdown file, controlling the options for the output file, including what the file type will be.
+It begins and ends with `---`, and consists of a list of keyword - value pairs.
+Here is a basic example for rendering an HTML file:
+
+```{r, eval = FALSE}
+---
+title: "Document Title"
+author: "Author Name"
+date: "MM/DD/YYYY"
+output:
+  html_document
+---
+```
+
+### Code Blocks
+
+What makes R Markdown unique is the ability to insert and evaluate blocks of code within the plain text document.
+The syntax for a block of code is the following:
+
+````markdown
+`r ''````{r}
+# Code goes here
+```
+````
+
+
+
+#### Code Block Options
+
+Aspects of code blocks and their output can be controlled by options.
+Here is a (non-exhaustive) list of some useful options:
+
+| Option | Value | Effect |
+|--------|-------|--------|
+| `echo` | `TRUE` or `FALSE` | Controls the display of code in output. |
+| `eval` | `TRUE` or `FALSE` | Controls whether to run the code chunk. |
+| `include`| `TRUE` or `FALSE` | Controls whether to include a code chunk in output at all. |
+| `results` | `"markup"`, `"asis"`, `"hide"`, or `"hold"` | Controls how the output of a code chunk is displayed in the output document. |
+| `fig.width` <br> `fig.height` | A number | Plot dimension in inches. |
+
+### Inline Code
+
+
+### Rendering Output
+
 
 # PowerPoint Specifics
 

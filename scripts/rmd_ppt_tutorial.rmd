@@ -146,7 +146,27 @@ Here is a (non-exhaustive) list of some useful options:
 
 # PowerPoint Specifics
 
+One of the many formats that R Markdown can render output to is PowerPoint.
+We will explore some of the syntax and functionality for creating a PowerPoint presentation.
+
+## Getting Started
+
+The first step is to make sure we have the correct output type in our YAML header:
+
+```{r, eval = FALSE}
+---
+title: "Presentation Title"
+author: "Author Name"
+date: "MM/DD/YYYY"
+output:
+  powerpoint_presentation
+---
+```
+
 ## New Slides
+
+Markdown section headers are the main way a new slide are generated.
+A new slide with no header can be manually inserted using the horizontal rule `---`.
 
 ## Text Formatting
 
@@ -155,15 +175,15 @@ Here is a (non-exhaustive) list of some useful options:
 ### Controlling Image Size
 
 
-# More Advanced Features
+# Additional Features
 
 ## Table of Contents
 
 ## Speaker Notes
 
-## Custom Templates
-
 ## Multi-Column Slides
+
+## Custom Templates
 
 # Sources
 

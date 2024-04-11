@@ -42,6 +42,17 @@ Both elements are written as plain text in a single file, and rendered into vari
 
 ## Markdown Syntax
 
+Content is split up using the symbol `#` for section headers, with the number of `#` indicating the level of the header.
+
+```markdown
+# Level 1 Header
+## Level 2 Header
+### Level 3 Header
+#### Level 4 Header
+```
+
+Standard text formatting can be accomplished using Markdown.
+
 | Operation | Syntax | Result |
 |-----------|--------|--------|
 | Italic | `*italic*` | *italic* |
@@ -49,7 +60,7 @@ Both elements are written as plain text in a single file, and rendered into vari
 | Strikeout | `~~strikeout~~` | ~~strikeout~~ |
 | Subscript | `Some Text~subscript~` | Some Text~subscript~ |
 | Superscript | `Some Text^superscript^` | Some Text^superscript^ |
-| Verbatim/code | ``verbatim`` | `verbatim` |
+| Verbatim/code | `` `verbatim` `` | `verbatim` |
 | Links | `[R Markdown](https://rmarkdown.rstudio.com/)` | [R Markdown](https://rmarkdown.rstudio.com/) |
 
 ### Lists

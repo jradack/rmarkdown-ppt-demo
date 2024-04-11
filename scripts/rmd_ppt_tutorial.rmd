@@ -189,8 +189,10 @@ A new slide with no header can be manually inserted using the horizontal rule `-
 
 For more information, visit these sites:
 
+- [rmarkdown :: Cheatsheet](https://rstudio.github.io/cheatsheets/html/rmarkdown.html)
 - [posit - Rendering PowerPoint Presentations with the RStudio IDE](https://support.posit.co/hc/en-us/articles/360004672913-Rendering-PowerPoint-Presentations-with-the-RStudio-IDE)
 - [R Markdown: The Definitive Guide - PowerPoint presentation](https://bookdown.org/yihui/rmarkdown/powerpoint-presentation.html)
+- [Pandoc - Slide shows](https://pandoc.org/chunkedhtml-demo/10-slide-shows.html)
 - [Markdown Guide](https://www.markdownguide.org/)
 
 <div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>

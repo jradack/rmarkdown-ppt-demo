@@ -87,11 +87,9 @@ R Studio will even include a nice preview to show you what your equation will lo
 
 Longer chunks of quoted text can be formatted using the symbol `>`.
 
-> Block quotations
-
-## Code Blocks
-
-## Rendering Output
+> "All models are wrong, but some are useful."
+> 
+> \- George E. P. Box
 
 
 # PowerPoint Specifics
